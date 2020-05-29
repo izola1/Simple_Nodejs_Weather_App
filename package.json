@@ -1,0 +1,19 @@
+{
+  "name": "simple_nodejs_weather_app",
+  "version": "1.0.0",
+  "description": "Simple Nodejs Weather Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izola1/Simple_Nodejs_Weather_App.git"
+  },
+  "author": "Isaac Adamu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izola1/Simple_Nodejs_Weather_App/issues"
+  },
+  "homepage": "https://github.com/izola1/Simple_Nodejs_Weather_App#readme"
+}
