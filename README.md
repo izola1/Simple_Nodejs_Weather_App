@@ -25,9 +25,9 @@ $ npm install
 - node index.js
 
 # Run the App by passing arguments, to display the weather data for your chosen city.
-- node index.js --c [NAME_OF_THE_CITY] --p [POSTAL_CODE_OF_THE_CITY]   or
+- node index.js  --c  [NAME_OF_THE_CITY]  --p  [POSTAL_CODE_OF_THE_CITY]   or
 
-- node index.js --c=[NAME_OF_THE_CITY] --p=[POSTAL_CODE_OF_THE_CITY]
+- node index.js  --c=[NAME_OF_THE_CITY]  --p=[POSTAL_CODE_OF_THE_CITY]
 
 
            
