@@ -1,15 +1,26 @@
-let request = require("request");
+const argv = require("yargs").argv;
+const axios = require("axios");
 
-let apiKey = "472430044e980f10dbf2bcbd0a0b6eee";
-let city = "jos";
-let zipCode = 930271;
-let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&zip={zipCode}&appid=${apiKey}`;
+//adding yargs for command line interactivity
+let city = argv.c || "New York";
+let postCode = argv.p || "10001";
 
-request(url, function (err, response, body) {
-  if (err) {
-    console.log("error:", error);
-  } else {
-    let weather = JSON.parse(body);
-    console.log("body:", weather);
-  }
-});
+let locationDetail = [city, postCode];
+
+const params = {
+  access_key: "6b3baf578c4838ec20f381b2640e1bf4",
+  query: locationDetail[0] || locationDetail[1],
+};
+
+//making get request to the weather api and displaying result to the console
+axios
+  .get("http://api.weatherstack.com/current", { params })
+  .then((response) => {
+    const apiResponse = response.data;
+    console.log(
+      `The local time in ${apiResponse.location.name} ${apiResponse.location.country} is ${apiResponse.location.localtime} and its current temperature is ${apiResponse.current.temperature}℃  and cloud cover is ${apiResponse.current.cloudcover}. `
+    );
+  })
+  .catch((error) => {
+    console.log(error);
+  });
