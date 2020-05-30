@@ -21,10 +21,10 @@ $ cd Simple_Nodejs_Weather_App
 # install project dependencies
 $ npm install
 
-### Run the App without passing arguments, which display the weather and time data for the default city(New York).
+# Run the App without passing arguments, to display the weather data for the default city(New York).
 - node index.js
 
-### Run the App by passing arguments, to display the weather and time data for the chosen city.
+# Run the App by passing arguments, to display the weather data for your chosen city.
 - node index.js --c [NAME_OF_THE_CITY] --p [POSTAL_CODE_OF_THE_CITY]   or
 
 - node index.js --c=[NAME_OF_THE_CITY] --p=[POSTAL_CODE_OF_THE_CITY]
